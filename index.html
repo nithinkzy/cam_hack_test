@@ -7,18 +7,27 @@
     <title>Auto Capture and Display</title>
     <!-- Include Tailwind CSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body class="bg-gray-100 h-screen">
     <div class="container mx-auto p-4 text-center">
-        <h1 class="text-3xl font-semibold mb-4">🔒 Protect Your Privacy: Think Before You Click! 🔍</h1>
-        <p class="text-lg mb-4">Before you click "Allow" on any website, remember that your privacy matters. Many
-            websites may request permissions to access your data 📊, but not all of them have good intentions. By being
-            cautious, you can safeguard your personal information and digital identity. On this page, we'll show you the
-            kind of data websites can access – so you become more aware of the importance of checking sites before
-            giving permission. 🚫</p>
-    </div>
+        <h1 class="text-3xl font-semibold mb-4">👁️‍🗨️ Explore and Learn: Boost Your Awareness! 👁️‍🗨️</h1>
+        <p class="text-lg mb-4">🚀 Our website offers an interactive and educational experience designed to raise
+            awareness about online privacy and the potential risks of granting permissions to unknown websites. We
+            provide users with a safe and controlled environment to see firsthand what kind of data websites can access
+            when granted permissions.</p>
+        <p class="text-lg mb-4">🌐 Our primary goal is to empower users with knowledge about online privacy and
+            encourage responsible internet behavior. We believe that by understanding the risks and consequences of
+            granting permissions to websites, individuals can better protect their personal information and digital
+            security. This project is a harmless experiment that aims to shed light on these important issues and
+            promote a safer online environment for everyone. 🔒</p>
 
+        <h2 class="text-2xl font-semibold my-4">Change the Language for Better Understanding</h2>
+        <div id="google_translate_element" class=" w-[150px] p-2 text-center border rounded-lg bg-white shadow-md">
+        </div>
+    </div>
 
     <div class="container mx-auto p-4">
         <div class="grid lg:grid-cols-3 gap-4">
@@ -132,6 +141,14 @@
                 console.error("Error fetching IP details: ", error);
                 userIPElement.textContent = "Unable to retrieve IP";
             });
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', // Replace 'en' with your website's default language code
+                includedLanguages: 'en,es,fr,de,ja,zh-CN,hi,bn,te,mr,ta,ur,gu,kn,ml,pa,or', // List of languages to offer for translation
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
     </script>
 </body>
 
